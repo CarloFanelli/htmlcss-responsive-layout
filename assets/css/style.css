@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --re-light: #fff;
+    --re-dark: rgba(50, 50, 51, 1);
+    --re-first: rgba(1, 132, 252, 1);
+    --re-second: rgba(150, 146, 229, 1);
+    --re-attention: rgba(253, 192, 94, 1);
+}
+
+/* #region Common CSS */
+
+/* #endregion Common CSS */
+
+
+/* #region Utility CSS */
+
+
+/* #endregion Utility CSS */
