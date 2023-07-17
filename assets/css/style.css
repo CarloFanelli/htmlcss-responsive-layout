@@ -12,12 +12,103 @@
     --re-attention: rgba(253, 192, 94, 1);
 }
 
+p, a {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+}
+
 /* #region Common CSS */
+
 
 /* #endregion Common CSS */
 
-
 /* #region Utility CSS */
+
+.d-flex{
+    display: flex;
+}
+.w-75{
+    width: 75%;
+    margin: 0 auto;
+}
 
 
 /* #endregion Utility CSS */
+
+/* #region header */
+    .nav-mobile{
+        display: none;
+    }
+    header{
+        background-color: var(--re-first);
+        padding: 0.5rem 0;
+    }
+
+    nav.d-flex{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-pc li{
+        list-style-type: none;
+        padding: 0.5rem 0.8rem;
+    }
+    .nav-pc li>a{
+        color: var(--re-light);
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+    .nav-pc li:last-child{
+        background-color: var(--re-light);
+        border-radius: 20px;
+    }
+    .nav-pc li:last-child a{
+        color: var(--re-dark);
+        text-align: center;
+
+    }
+
+/* #endregion header */
+
+/* #region main */
+
+/* #endregion main */
+
+/* #region footer */
+
+/* #endregion footer */
+
+
+/* #region MOBILE */
+
+@media screen and (max-width:480px) {
+    .nav-pc{
+        display: none;
+    }
+    .nav-mobile{
+        display: block;
+    }
+    .nav-mobile>i{
+        color: var(--re-light);
+    }
+}
+
+/* #region TABLET */
+
+@media screen and (max-width:768px) {
+
+    .nav-pc{
+        display: none;
+    }
+    .nav-mobile{
+        display: block;
+    }
+    .nav-mobile>i{
+        color: var(--re-light);
+    }
+
+
+}
+
