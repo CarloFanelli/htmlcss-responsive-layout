@@ -2,24 +2,50 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    border: 1px solid red;
 }
 
 :root {
     --re-light: #fff;
     --re-dark: rgba(50, 50, 51, 1);
     --re-first: rgba(1, 132, 252, 1);
+    --re-first-light: rgba(181, 220, 254, 1);
     --re-second: rgba(150, 146, 229, 1);
     --re-attention: rgba(253, 192, 94, 1);
 }
 
-p, a {
+*{
     font-family: 'PT Sans', sans-serif;
+}
+
+p, a {
     font-weight: 400;
     text-decoration: none;
 }
 
 /* #region Common CSS */
 
+    .card{
+        width: calc( 100%/12 * 4 );
+        margin: 0 auto;
+    }
+    .card-large{
+        width: calc(100%/12 * 8);
+        margin: 0 auto;
+    }
+
+    .btn-blue{
+        padding: 0.5rem 1rem;
+        background-color: var(--re-first);
+        border-radius: 25px;
+        width: 75%;
+    }
+    .btn-blue a{
+        display: flex;
+    }
+    .btn-blue i, .btn-blue p{
+        color: var(--re-light);
+    }
 
 /* #endregion Common CSS */
 
@@ -28,9 +54,17 @@ p, a {
 .d-flex{
     display: flex;
 }
-.w-75{
-    width: 75%;
+.w-80{
+    width: 80%;
     margin: 0 auto;
+}
+
+.p-1{
+    padding: 1rem;
+}
+
+.py-2{
+    padding: 2rem 0;
 }
 
 
@@ -73,6 +107,64 @@ p, a {
 /* #endregion header */
 
 /* #region main */
+    .jumbotron{
+        max-width: 1152px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .row{
+        margin: 0 -1rem;
+    }
+    .jumbotron .content{
+        flex-wrap: wrap;
+    }
+
+    .jumbotron .card, .jumbotron .card-large{
+        background-color: var(--re-first-light);
+        border-radius: 30px;
+    }
+
+    .jumbotron .card-large{
+        display: flex;
+    }
+     .jumbotron .card-large>.card-header{
+        padding: 1rem;
+    }
+
+    .jumbotron .card-header>h3, 
+    .jumbotron .card-header>p,
+    .jumbotron .card-header .btn-blue{
+        margin: 2rem 0;
+    } 
+
+    .jumbotron .card-large>.card-content{
+        display: flex;
+        justify-content: center;
+        align-items: bottom;
+        padding: 1rem 1rem 0;
+    }
+
+    .jumbotron .card-large>.card-content>img{
+        width: 14rem;
+    }
+
+    .jumbotron .card{
+        padding: 1rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .jumbotron .card i{
+        color: var(--re-first);
+        font-size: 4rem;
+    }
+    .jumbotron .card h3,
+        .jumbotron .card-large h3{
+        color: var(--re-first);
+    }
 
 /* #endregion main */
 
@@ -109,6 +201,12 @@ p, a {
         color: var(--re-light);
     }
 
+    .jumbotron .content{
+        flex-direction: column;
+    }
+    .jumbotron .card-large{
+        flex-direction: column;
+    }
 
 }
 
