@@ -14,56 +14,63 @@
     --re-attention: rgba(253, 192, 94, 1);
 }
 
-*{
+* {
     font-family: 'PT Sans', sans-serif;
 }
 
-p, a {
+p,
+a {
     font-weight: 400;
     text-decoration: none;
 }
 
 /* #region Common CSS */
 
-    .card{
-        width: calc( 100%/12 * 4 );
-        margin: 0 auto;
-    }
-    .card-large{
-        width: calc(100%/12 * 8);
-        margin: 0 auto;
-    }
+.col-l-4 {
+    width: calc(100%/12 * 4 - 1rem);
+    margin: 0 auto;
+}
 
-    .btn-blue{
-        padding: 0.5rem 1rem;
-        background-color: var(--re-first);
-        border-radius: 25px;
-        width: 75%;
-    }
-    .btn-blue a{
-        display: flex;
-    }
-    .btn-blue i, .btn-blue p{
-        color: var(--re-light);
-    }
+.col-l-8 {
+    width: calc(100%/12 * 8 - 1rem);
+    margin: 0 auto;
+}
+
+.btn-blue {
+    padding: 0.5rem 1rem;
+    background-color: var(--re-first);
+    border-radius: 25px;
+    width: 75%;
+}
+
+.btn-blue a {
+    display: flex;
+}
+
+.btn-blue i,
+.btn-blue p {
+    color: var(--re-light);
+}
 
 /* #endregion Common CSS */
 
 /* #region Utility CSS */
 
-.d-flex{
+.d-flex {
     display: flex;
 }
-.w-80{
+
+.w-80 {
+    max-width: 1152px;
     width: 80%;
     margin: 0 auto;
 }
 
-.p-1{
+.p-1 {
     padding: 1rem;
 }
 
-.py-2{
+.py-2 {
     padding: 2rem 0;
 }
 
@@ -71,100 +78,112 @@ p, a {
 /* #endregion Utility CSS */
 
 /* #region header */
-    .nav-mobile{
-        display: none;
-    }
-    header{
-        background-color: var(--re-first);
-        padding: 0.5rem 0;
-    }
+.nav-mobile {
+    display: none;
+}
 
-    nav.d-flex{
-        justify-content: space-between;
-        align-items: center;
-    }
+header {
+    background-color: var(--re-first);
+    padding: 0.5rem 0;
+}
 
-    .nav-pc li{
-        list-style-type: none;
-        padding: 0.5rem 0.8rem;
-    }
-    .nav-pc li>a{
-        color: var(--re-light);
-        text-transform: capitalize;
-        text-align: center;
-    }
+nav.d-flex {
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .nav-pc li:last-child{
-        background-color: var(--re-light);
-        border-radius: 20px;
-    }
-    .nav-pc li:last-child a{
-        color: var(--re-dark);
-        text-align: center;
+.nav-pc li {
+    list-style-type: none;
+    padding: 0.5rem 0.8rem;
+}
 
-    }
+.nav-pc li>a {
+    color: var(--re-light);
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.nav-pc li:last-child {
+    background-color: var(--re-light);
+    border-radius: 20px;
+}
+
+.nav-pc li:last-child a {
+    color: var(--re-dark);
+    text-align: center;
+
+}
 
 /* #endregion header */
 
 /* #region main */
-    .jumbotron{
-        max-width: 1152px;
-        width: 80%;
-        margin: 0 auto;
-    }
+/* #region jumbo */
 
-    .row{
-        margin: 0 -1rem;
-    }
-    .jumbotron .content{
-        flex-wrap: wrap;
-    }
+.jumbotron {
+    max-width: 1152px;
+    width: 80%;
+    margin: 0 auto;
+}
 
-    .jumbotron .card, .jumbotron .card-large{
-        background-color: var(--re-first-light);
-        border-radius: 30px;
-    }
+.jumbotron .content {
+    flex-wrap: wrap;
+}
+ 
+.jumbotron .card:first-child>.card-header {
+    padding: 1rem;
+}
 
-    .jumbotron .card-large{
-        display: flex;
-    }
-     .jumbotron .card-large>.card-header{
-        padding: 1rem;
-    }
+.jumbotron .card-header>h3,
+.jumbotron .card-header>p,
+.jumbotron .card-header .btn-blue {
+    margin: 2rem 0;
+}
 
-    .jumbotron .card-header>h3, 
-    .jumbotron .card-header>p,
-    .jumbotron .card-header .btn-blue{
-        margin: 2rem 0;
-    } 
+.jumbotron .card:first-child>.card-content {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 1rem 1rem 0;
+}
 
-    .jumbotron .card-large>.card-content{
-        display: flex;
-        justify-content: center;
-        align-items: bottom;
-        padding: 1rem 1rem 0;
-    }
+.jumbotron .card:first-child>.card-content>img {
+    width: 14rem;
+}
 
-    .jumbotron .card-large>.card-content>img{
-        width: 14rem;
-    }
+.jumbotron .card {
+    margin: 1rem 0.5rem;
+    background-color: var(--re-first-light);
+    border-radius: 30px;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-    .jumbotron .card{
-        padding: 1rem;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .jumbotron .card i{
-        color: var(--re-first);
-        font-size: 4rem;
-    }
-    .jumbotron .card h3,
-        .jumbotron .card-large h3{
-        color: var(--re-first);
-    }
+.jumbotron .card i {
+    color: var(--re-first);
+    font-size: 4rem;
+}
+
+.jumbotron .card:first-child i{
+    color: var(--re-light);
+    font-size: 1rem;
+}
+
+.jumbotron .card h3 {
+    color: var(--re-first);
+} 
+
+.jumbotron .card:first-child{
+    flex-direction: row;
+    align-items: end;
+    padding-bottom: 0;
+}
+
+/* #endregion jumbo */
+
 
 /* #endregion main */
 
@@ -176,37 +195,62 @@ p, a {
 /* #region MOBILE */
 
 @media screen and (max-width:480px) {
-    .nav-pc{
+/* #region Utility CSS */
+
+    .col-s-12{
+        width: calc(100%/12 * 12);
+        margin: 0 auto;
+    }
+/* #endregion Utility CSS */
+
+    .nav-pc {
         display: none;
     }
-    .nav-mobile{
+
+    .nav-mobile {
         display: block;
     }
-    .nav-mobile>i{
+
+    .nav-mobile>i {
         color: var(--re-light);
     }
+
+    
 }
 
 /* #region TABLET */
 
 @media screen and (max-width:768px) {
 
-    .nav-pc{
+/* #region Utility CSS */
+.col-m-12{
+    width: calc(100%/12 * 12);
+    margin: 0 auto;
+}
+/* #endregion Utility CSS */
+
+    .nav-pc {
         display: none;
     }
-    .nav-mobile{
+
+    .nav-mobile {
         display: block;
     }
-    .nav-mobile>i{
+
+    .nav-mobile>i {
         color: var(--re-light);
     }
 
-    .jumbotron .content{
+    .jumbotron {
+        width: 90%;
+    }
+
+    .jumbotron .content {
         flex-direction: column;
     }
-    .jumbotron .card-large{
+
+    .jumbotron .card:first-child{
         flex-direction: column;
     }
 
 }
-
