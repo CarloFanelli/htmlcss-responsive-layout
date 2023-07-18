@@ -142,7 +142,7 @@ nav.d-flex {
     margin: 0 auto;
 }
 
-.jumbotron .content {
+.jumbotron .row {
     flex-wrap: wrap;
     margin: 0 -1rem;
 }
@@ -207,7 +207,7 @@ nav.d-flex {
     background-color: var(--re-second);
 }
 
-.what .content {
+.what .row {
     justify-content: space-evenly;
 }
 
@@ -258,9 +258,61 @@ nav.d-flex {
     line-height: 3rem;
     font-size: 1.5rem;
 }
-
+.what .card{
+    margin-top: 13rem;
+}
 
 /* #endregion what */
+
+/* #region testimonials */
+.testimonials .title{
+    text-align: center;
+    padding: 2rem 0;
+}
+.testimonials .title h4{
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
+.testimonials .title h2{
+    color: var(--re-second);
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.testimonials .card{
+    background-color: var(--re-second);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem 1rem 0.5rem;
+    border-radius: 30px;
+    margin: 2rem 0;
+}
+.testimonials .card-photo{
+    width: 15%;
+    aspect-ratio: 1;
+}
+.testimonials .card-photo>img{
+    max-width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.testimonials .card-content{
+    color: var(--re-light);
+    padding: 2rem;
+}
+
+.testimonials .card-content h4{
+    text-transform: uppercase;
+    padding-top: 1rem;
+}
+
+
+/* #endregion testimonials */
+
 
 
 /* #endregion main */
@@ -294,6 +346,14 @@ nav.d-flex {
         color: var(--re-light);
     }
 
+    .testimonials .card{
+        flex-direction: column;
+    }
+
+    .testimonials .card-photo {
+        width: 50%;
+        aspect-ratio: 1;
+    }
 
 }
 
@@ -322,7 +382,7 @@ nav.d-flex {
     }
 
 
-    .jumbotron .content {
+    .jumbotron .row {
         flex-direction: column;
     }
 
@@ -330,12 +390,16 @@ nav.d-flex {
         flex-direction: column;
     }
 
-    .what .content{
+    .what .row{
         flex-direction: column;
     }
 
-    .what .spacer-10, .what .spacer-5{
-        display: none;
+    .what .card{
+        margin-top: 1rem;
     }
 
+    .testimonials .card-photo {
+        width: 70%;
+        aspect-ratio: 1;
+    }
 }
