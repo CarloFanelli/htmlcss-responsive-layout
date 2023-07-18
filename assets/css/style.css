@@ -59,11 +59,12 @@ h2 {
     padding: 0.5rem 1rem;
     background-color: var(--re-first);
     border-radius: 25px;
-    width: 75%;
+    width: 50%;
 }
 
 .btn-blue a {
     display: flex;
+    align-items: center;
 }
 
 .btn-blue i,
@@ -201,8 +202,14 @@ nav.d-flex {
     margin: 0 -1rem;
 }
 
+
 .jumbotron .card:first-child>.card-header {
     padding: 1rem;
+    text-align: left;
+}
+
+.jumbotron .card:first-child>.card-header i {
+    padding-right: 0.5rem;
 }
 
 .jumbotron .card-header>h3,
@@ -212,6 +219,7 @@ nav.d-flex {
 }
 
 .jumbotron .card:first-child>.card-content {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: end;
@@ -219,7 +227,7 @@ nav.d-flex {
 }
 
 .jumbotron .card:first-child>.card-content>img {
-    width: 14rem;
+    max-width: 14rem;
 }
 
 .jumbotron .card {
@@ -354,7 +362,7 @@ nav.d-flex {
 }
 
 .testimonials .card-photo {
-    width: 15%;
+    width: 30%;
     aspect-ratio: 1;
 }
 
@@ -376,6 +384,15 @@ nav.d-flex {
     font-size: 1rem;
 }
 
+.testimonials .card-content i:first-child{
+    padding-right:0.5rem ;
+}
+.testimonials .card-content i:last-child{
+    padding-left:0.5rem ;
+}
+
+
+
 
 /* #endregion testimonials */
 
@@ -387,7 +404,7 @@ nav.d-flex {
 
 .work-with-us .title {
     color: var(--re-light);
-    padding: 2rem 0;
+    padding: 2rem;
     text-align: center;
 }
 
@@ -401,6 +418,9 @@ nav.d-flex {
     background-color: var(--re-light);
     padding: 1rem;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .work-with-us .card h2,
@@ -425,23 +445,23 @@ nav.d-flex {
     line-height: 1.7rem;
     padding: 1rem 0;
 }
-
+.about-us .photo{
+    position: relative;
+}
 .about-us .photo i {
-    font-size: 4rem;
+    font-size: 5rem;
     color: var(--re-second);
     position: absolute;
 
-    right: 1rem;
-    top: 1rem;
+    right: 0;
+    top: 0;
 }
 
 .about-us .cit {
     padding-left: 2rem;
-    position: relative;
 }
 
 .about-us .photo>img {
-    padding: 0 1rem;
     max-width: 100%;
     border-radius: 50%;
 }
@@ -536,6 +556,9 @@ nav.d-flex {
         width: 80%;
     }
 
+    .btn-blue{
+        width: 80%;
+    }
     /* #endregion Utility CSS */
 
     .nav-pc {
@@ -557,6 +580,13 @@ nav.d-flex {
 
     .jumbotron .card:first-child {
         flex-direction: column;
+    }
+
+    .what .card img {
+        width: 100%;
+    }
+    .what .col-l-4:first-child img {
+        margin-bottom: 4rem;
     }
 
     .what .row {
