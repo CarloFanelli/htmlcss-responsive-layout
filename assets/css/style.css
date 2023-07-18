@@ -1,8 +1,8 @@
 * {
     padding: 0;
     margin: 0;
+    /* border: 1px solid red; */
     box-sizing: border-box;
-    border: 1px solid red;
 }
 
 :root {
@@ -18,25 +18,30 @@
     font-family: 'PT Sans', sans-serif;
 }
 
+/* #region Common CSS */
 p,
 a {
     font-weight: 400;
     text-decoration: none;
 }
-p,i{
+
+p,
+i {
     line-height: 1.5rem;
 }
-h4{
+
+h4 {
     font-size: 1.4rem;
 }
-h3{
+
+h3 {
     font-size: 2.2rem;
 }
-h2{
+
+h2 {
     font-size: 3.5rem;
 }
 
-/* #region Common CSS */
 
 .col-l-4 {
     width: calc(100%/12 * 4 - 1rem);
@@ -66,7 +71,7 @@ h2{
     color: var(--re-light);
 }
 
-.btn-secondary{
+.btn-secondary {
     margin: 1rem 0;
     padding: 0.5rem 1rem;
     background-color: var(--re-second);
@@ -77,11 +82,11 @@ h2{
 }
 
 .btn-secondary p,
-.btn-secondary i{
+.btn-secondary i {
     color: var(--re-light);
 }
 
-.btn-light{
+.btn-light {
     margin: 1rem auto;
     padding: 1rem;
     background-color: var(--re-light);
@@ -90,35 +95,37 @@ h2{
     display: flex;
     justify-content: center;
 }
-.btn-light a, .btn-light p{
+
+.btn-light a,
+.btn-light p {
     color: var(--re-second);
     font-weight: 700;
     letter-spacing: 2px;
 }
+
 /* #endregion Common CSS */
 
 /* #region Utility CSS */
-.spacer-10{
-    height: 10rem;
-}
-.spacer-5{
-    height: 5rem;
-}
+
 .d-flex {
     display: flex;
 }
-.d-flex-start{
+
+.d-flex-start {
     display: flex;
     align-items: start;
     flex-direction: column;
+    justify-content: flex-end;
+
 }
-.d-flex-end{
+
+.d-flex-end {
     display: flex;
     flex-direction: column;
     align-items: end;
 }
 
-.w-50{
+.w-50 {
     max-width: 1152px;
     width: 50%;
     margin: 0 auto;
@@ -258,21 +265,27 @@ nav.d-flex {
     justify-content: space-evenly;
 }
 
+.what .card img {
+    width: 50%;
+}
+
 .what img {
-    width: 70%;
+    max-width: 100%;
 }
 
 .what .col-l-4:first-child {
     color: var(--re-light);
 }
 
-.what .col-l-4:first-child img,
-.what .col-l-4:first-child h3,
-.what .col-l-4:first-child p{
-    margin-bottom: 1.5rem;
+.what .col-l-4:first-child h3 {
+    margin-bottom: 2.5rem;
 }
 
-.what .card{
+.what .col-l-4:first-child img {
+    margin-bottom: 4rem;
+}
+
+.what .card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -284,51 +297,54 @@ nav.d-flex {
 }
 
 .what .card img,
-.what .card h3{
+.what .card h3 {
     padding: 1rem 0;
 }
 
-.what .card p{
+.what .card p {
     margin-top: 1rem;
     font-style: italic;
 }
 
-.what .card>.icon{
+.what .card>.icon {
     margin-top: 1rem;
     background-color: var(--re-second);
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
 }
-.what .card>.icon>i{
+
+.what .card>.icon>i {
     color: var(--re-light);
     line-height: 3rem;
     font-size: 1.5rem;
 }
-.what .card{
-    margin-top: 13rem;
+
+.what .card {
+    margin-top: 5rem;
 }
 
 /* #endregion what */
 
 /* #region testimonials */
-.testimonials .title{
+.testimonials .title {
     text-align: center;
     padding: 2rem 0;
 }
-.testimonials .title h4{
+
+.testimonials .title h4 {
     text-transform: uppercase;
     font-weight: 400;
     padding: 1rem 0;
 }
 
-.testimonials .title h2{
+.testimonials .title h2 {
     color: var(--re-second);
     font-size: 2.5rem;
     padding: 1rem 0;
 }
 
-.testimonials .card{
+.testimonials .card {
     background-color: var(--re-second);
     justify-content: center;
     align-items: center;
@@ -336,25 +352,28 @@ nav.d-flex {
     border-radius: 30px;
     margin: 2rem 0;
 }
-.testimonials .card-photo{
+
+.testimonials .card-photo {
     width: 15%;
     aspect-ratio: 1;
 }
-.testimonials .card-photo>img{
+
+.testimonials .card-photo>img {
     max-width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.testimonials .card-content{
+.testimonials .card-content {
     color: var(--re-light);
     padding: 2rem;
 }
 
-.testimonials .card-content h4{
+.testimonials .card-content h4 {
     text-transform: uppercase;
     padding-top: 1rem;
+    font-size: 1rem;
 }
 
 
@@ -362,22 +381,22 @@ nav.d-flex {
 
 /* #region workwithus */
 
-.work-with-us{
+.work-with-us {
     background-color: var(--re-second);
 }
 
-.work-with-us .title{
+.work-with-us .title {
     color: var(--re-light);
     padding: 2rem 0;
     text-align: center;
 }
 
 
-.work-with-us .content{
+.work-with-us .content {
     flex-wrap: wrap;
 }
 
-.work-with-us .card{
+.work-with-us .card {
     margin: 0.5rem;
     background-color: var(--re-light);
     padding: 1rem;
@@ -393,46 +412,56 @@ nav.d-flex {
 /* #endregion workwithus */
 
 /* #region about-us */
-.about-us .content{
+.about-us .content {
     justify-content: space-between;
 }
-    .about-us .about h2{
-        color: var(--re-second);
-        padding: 1rem 0;
-    }
-    .about-us .about p{
-        line-height: 1.7rem;
-        padding: 1rem 0;
-    }
 
-    .about-us .photo i{
-        font-size: 4rem;
-        color: var(--re-second);
-        position: absolute;
-        right: 0;
-    }
+.about-us .about h2 {
+    color: var(--re-second);
+    padding: 1rem 0;
+}
 
-    .about-us .cit{
-        padding-left: 2rem;
-        position: relative;
-    }
-    .about-us .photo>img{
-        padding: 0 1rem;
-        max-width: 100%;
-        border-radius: 50%;
-    }
+.about-us .about p {
+    line-height: 1.7rem;
+    padding: 1rem 0;
+}
 
-    .about-us .cit .btn-secondary{
-        width: 90%;
-        justify-content: space-evenly;
-        align-items: center;
-        font-size: 0.8rem;
-    }
+.about-us .photo i {
+    font-size: 4rem;
+    color: var(--re-second);
+    position: absolute;
 
-    .about-us .cit h4{
-        padding: 1rem 0;
-        color: var(--re-second);
-    }
+    right: 1rem;
+    top: 1rem;
+}
+
+.about-us .cit {
+    padding-left: 2rem;
+    position: relative;
+}
+
+.about-us .photo>img {
+    padding: 0 1rem;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.about-us .cit .btn-secondary {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.about-us .cit .btn-secondary i {
+    padding-right: 0.5rem;
+}
+
+.about-us .cit h4 {
+    padding: 1rem 0;
+    color: var(--re-second);
+}
+
 /* #endregion about-us */
 
 
@@ -441,46 +470,46 @@ nav.d-flex {
 
 /* #region footer */
 
-.footer-top{
+.footer-top {
     background-color: var(--re-second);
     text-align: center;
 }
 
-.footer-top h4{
+.footer-top h4 {
     text-transform: uppercase;
     font-weight: 400;
     color: var(--re-light);
     padding: 0.5rem;
 }
 
-.footer-top h3{
+.footer-top h3 {
     text-transform: capitalize;
     color: var(--re-light);
     padding: 0.5rem;
 }
 
-.footer-top h2{
+.footer-top h2 {
     color: var(--re-attention);
     padding: 0.5rem;
 }
 
-.footer-top .copy{
+.footer-top .copy {
     font-size: 0.8rem;
     color: var(--re-light);
 }
 
-.copy a{
+.copy a {
     color: var(--re-light);
     text-transform: capitalize;
 }
 
-.footer-bottom{
+.footer-bottom {
     background-color: var(--re-dark);
     color: var(--re-light);
     text-align: center;
 }
 
-.footer-bottom a{
+.footer-bottom a {
     color: var(--re-second);
 }
 
@@ -498,13 +527,15 @@ nav.d-flex {
         width: calc(100%/12 * 12);
         margin: 0 auto;
     }
-    .col-m-6{
+
+    .col-m-6 {
         width: calc(100%/12*6 - 1rem);
     }
 
-    .w-m-80{
+    .w-m-80 {
         width: 80%;
     }
+
     /* #endregion Utility CSS */
 
     .nav-pc {
@@ -528,11 +559,11 @@ nav.d-flex {
         flex-direction: column;
     }
 
-    .what .row{
+    .what .row {
         flex-direction: column;
     }
 
-    .what .card{
+    .what .card {
         margin-top: 1rem;
     }
 
@@ -541,7 +572,7 @@ nav.d-flex {
         aspect-ratio: 1;
     }
 
-    .about-us .photo{
+    .about-us .photo {
         padding-left: 1rem;
     }
 }
@@ -573,7 +604,7 @@ nav.d-flex {
         color: var(--re-light);
     }
 
-    .testimonials .card{
+    .testimonials .card {
         flex-direction: column;
     }
 
@@ -582,11 +613,12 @@ nav.d-flex {
         aspect-ratio: 1;
     }
 
-    .about-us .content{
+    .about-us .content {
         flex-direction: column;
     }
-    .about-us .photo{
-        padding:0;
+
+    .about-us .photo {
+        padding: 0;
     }
 
 }
