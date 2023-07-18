@@ -23,11 +23,17 @@ a {
     font-weight: 400;
     text-decoration: none;
 }
+p,i{
+    line-height: 1.5rem;
+}
 h4{
     font-size: 1.4rem;
 }
+h3{
+    font-size: 2.2rem;
+}
 h2{
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 /* #region Common CSS */
@@ -65,15 +71,30 @@ h2{
     padding: 0.5rem 1rem;
     background-color: var(--re-second);
     border-radius: 25px;
-    width: 50%;
+    width: 55%;
     display: flex;
     justify-content: center;
 }
 
-.btn-secondary p{
+.btn-secondary p,
+.btn-secondary i{
     color: var(--re-light);
 }
 
+.btn-light{
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: var(--re-light);
+    border-radius: 25px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+.btn-light a, .btn-light p{
+    color: var(--re-second);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
 /* #endregion Common CSS */
 
 /* #region Utility CSS */
@@ -95,6 +116,12 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: end;
+}
+
+.w-50{
+    max-width: 1152px;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .w-80 {
@@ -365,11 +392,98 @@ nav.d-flex {
 
 /* #endregion workwithus */
 
+/* #region about-us */
+.about-us .content{
+    justify-content: space-between;
+}
+    .about-us .about h2{
+        color: var(--re-second);
+        padding: 1rem 0;
+    }
+    .about-us .about p{
+        line-height: 1.7rem;
+        padding: 1rem 0;
+    }
+
+    .about-us .photo i{
+        font-size: 4rem;
+        color: var(--re-second);
+        position: absolute;
+        right: 0;
+    }
+
+    .about-us .cit{
+        padding-left: 2rem;
+        position: relative;
+    }
+    .about-us .photo>img{
+        padding: 0 1rem;
+        max-width: 100%;
+        border-radius: 50%;
+    }
+
+    .about-us .cit .btn-secondary{
+        width: 90%;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 0.8rem;
+    }
+
+    .about-us .cit h4{
+        padding: 1rem 0;
+        color: var(--re-second);
+    }
+/* #endregion about-us */
+
 
 
 /* #endregion main */
 
 /* #region footer */
+
+.footer-top{
+    background-color: var(--re-second);
+    text-align: center;
+}
+
+.footer-top h4{
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--re-light);
+    padding: 0.5rem;
+}
+
+.footer-top h3{
+    text-transform: capitalize;
+    color: var(--re-light);
+    padding: 0.5rem;
+}
+
+.footer-top h2{
+    color: var(--re-attention);
+    padding: 0.5rem;
+}
+
+.footer-top .copy{
+    font-size: 0.8rem;
+    color: var(--re-light);
+}
+
+.copy a{
+    color: var(--re-light);
+    text-transform: capitalize;
+}
+
+.footer-bottom{
+    background-color: var(--re-dark);
+    color: var(--re-light);
+    text-align: center;
+}
+
+.footer-bottom a{
+    color: var(--re-second);
+}
+
 
 /* #endregion footer */
 
@@ -388,6 +502,9 @@ nav.d-flex {
         width: calc(100%/12*6 - 1rem);
     }
 
+    .w-m-80{
+        width: 80%;
+    }
     /* #endregion Utility CSS */
 
     .nav-pc {
@@ -423,7 +540,14 @@ nav.d-flex {
         width: 70%;
         aspect-ratio: 1;
     }
+
+    .about-us .photo{
+        padding-left: 1rem;
+    }
 }
+
+/* #endregion TABLET */
+
 
 /* #region MOBILE */
 
@@ -458,4 +582,13 @@ nav.d-flex {
         aspect-ratio: 1;
     }
 
+    .about-us .content{
+        flex-direction: column;
+    }
+    .about-us .photo{
+        padding:0;
+    }
+
 }
+
+/* #endregion MOBILE */
