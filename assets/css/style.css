@@ -23,6 +23,12 @@ a {
     font-weight: 400;
     text-decoration: none;
 }
+h4{
+    font-size: 1.4rem;
+}
+h2{
+    font-size: 3rem;
+}
 
 /* #region Common CSS */
 
@@ -51,6 +57,20 @@ a {
 
 .btn-blue i,
 .btn-blue p {
+    color: var(--re-light);
+}
+
+.btn-secondary{
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--re-second);
+    border-radius: 25px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-secondary p{
     color: var(--re-light);
 }
 
@@ -313,6 +333,38 @@ nav.d-flex {
 
 /* #endregion testimonials */
 
+/* #region workwithus */
+
+.work-with-us{
+    background-color: var(--re-second);
+}
+
+.work-with-us .title{
+    color: var(--re-light);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+
+.work-with-us .content{
+    flex-wrap: wrap;
+}
+
+.work-with-us .card{
+    margin: 0.5rem;
+    background-color: var(--re-light);
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+.work-with-us .card h2,
+.work-with-us .card h4 {
+    color: var(--re-second);
+    padding: 1rem 0;
+}
+
+/* #endregion workwithus */
+
 
 
 /* #endregion main */
@@ -322,40 +374,6 @@ nav.d-flex {
 /* #endregion footer */
 
 
-/* #region MOBILE */
-
-@media screen and (max-width:480px) {
-    /* #region Utility CSS */
-
-    .col-s-12 {
-        width: calc(100%/12 * 12);
-        margin: 0 auto;
-    }
-
-    /* #endregion Utility CSS */
-
-    .nav-pc {
-        display: none;
-    }
-
-    .nav-mobile {
-        display: block;
-    }
-
-    .nav-mobile>i {
-        color: var(--re-light);
-    }
-
-    .testimonials .card{
-        flex-direction: column;
-    }
-
-    .testimonials .card-photo {
-        width: 50%;
-        aspect-ratio: 1;
-    }
-
-}
 
 /* #region TABLET */
 
@@ -365,6 +383,9 @@ nav.d-flex {
     .col-m-12 {
         width: calc(100%/12 * 12);
         margin: 0 auto;
+    }
+    .col-m-6{
+        width: calc(100%/12*6 - 1rem);
     }
 
     /* #endregion Utility CSS */
@@ -402,4 +423,39 @@ nav.d-flex {
         width: 70%;
         aspect-ratio: 1;
     }
+}
+
+/* #region MOBILE */
+
+@media screen and (max-width:480px) {
+    /* #region Utility CSS */
+
+    .col-s-12 {
+        width: calc(100%/12 * 12);
+        margin: 0 auto;
+    }
+
+    /* #endregion Utility CSS */
+
+    .nav-pc {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+
+    .nav-mobile>i {
+        color: var(--re-light);
+    }
+
+    .testimonials .card{
+        flex-direction: column;
+    }
+
+    .testimonials .card-photo {
+        width: 50%;
+        aspect-ratio: 1;
+    }
+
 }
